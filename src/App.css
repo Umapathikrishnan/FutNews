@@ -36,3 +36,51 @@
     transform: rotate(360deg);
   }
 }
+
+.header {
+  height: 141px;
+  background: #4effb4;
+  border-radius: 0px 0px 35px 15px;
+}
+.input-cover {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 310px;
+  height: 50px;
+  border: 0;
+  outline: none;
+  background: #ffffff;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25),
+    inset -2px -2px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+}
+input {
+  width: 210px;
+  height: 42px;
+  border: 0;
+  outline: none;
+  background: none;
+}
+.search-btn {
+  background: none;
+  border: none;
+  width: 45px;
+  height: 45px;
+}
+.search-icon {
+  width: 25px;
+  height: 25px;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+.scroll-div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
