@@ -15,7 +15,10 @@ function App() {
   }, []);
   //starting render
   const fetchdata = async() => {
-    const res = await axios.get(`https://footballnewsapi.herokuapp.com/chelsea`);
+    const res = await axios.get(`https://footballnewsapi.herokuapp.com/chelsea`,{ 
+      headers: {
+        "Access-Control-Allow-Origin": "*"
+    }});
     const datas = await res.data;
     if(datas.length > 0){
       setNews(datas)
@@ -26,7 +29,10 @@ function App() {
 
   const handleSubmit = async(e)=>{
     e.preventDefault(); 
-    const resp = await axios.get("https://footballnewsapi.herokuapp.com/"+team);
+    const resp = await axios.get("https://footballnewsapi.herokuapp.com/"+team,{ 
+      headers: {
+        "Access-Control-Allow-Origin": "*"
+    }});
     const datas = await resp.data;
     if(datas.length > 0){
       setNews(datas)
@@ -34,8 +40,8 @@ function App() {
     else{
       setNews([{"title":"Please enter the valid club name","url":"/"}])
     }
-    console.log(news.length)
-    setLoading(true)
+    console.log(news)
+    //setLoading(true)
   }
 
 
